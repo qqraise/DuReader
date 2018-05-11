@@ -17,7 +17,7 @@
 """
 Implements data parsers for different tasks on DuReader dataset.
 """
-
+from __future__ import print_function
 import copy
 import itertools
 import logging
@@ -374,5 +374,5 @@ if __name__ == '__main__':
     # test reader
     reader = dataset.create_reader()
     for r in reader():
-        print r
+        print(r)
 
