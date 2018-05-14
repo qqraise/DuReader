@@ -60,7 +60,6 @@ train() {
         --log_period 10 \
         --test_period 100 \
         --num_passes 2 \
-        --use_gpu \
         --save_dir $model_dir \
         --algo $algo \
         $@ \
@@ -75,7 +74,6 @@ infer() {
         --batch_size 32 \
         --vocab_size $vocab_size \
         --trainer_count 1 \
-        --use_gpu \
         --is_infer \
         $@ \
         --algo $algo 2>&1 | tee $log_dir/infer.$model_name.log
