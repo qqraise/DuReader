@@ -27,6 +27,7 @@ import gzip
 
 import paddle.v2 as paddle
 import paddle.v2.evaluator as evaluator
+from paddle import batch, reader
 import paddle.v2.optimizer as opt
 
 
@@ -153,10 +154,10 @@ class Trainer(object):
 
     def _prepare(self):
         # prepare reader
-        self.train_reader = paddle.batch(
+        self.train_reader = batch(
                             reader=self.train_reader.create_reader(),
                             batch_size=self.args.batch_size)
-        self.test_reader = paddle.batch(
+        self.test_reader = batch(
                            reader=self.test_reader.create_reader(),
                            batch_size=self.args.batch_size)
 
