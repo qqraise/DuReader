@@ -56,10 +56,9 @@ train() {
         --emb_dim $emb_dim \
         --batch_size 32 \
         --vocab_size $vocab_size \
-        --trainer_count 1 \
+        --trainer_count 4 \
         --log_period 10 \
         --test_period 100 \
-        --use_gpu \
         --save_dir $model_dir \
         --algo $algo \
         $@ \
