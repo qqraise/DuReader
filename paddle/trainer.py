@@ -27,7 +27,7 @@ import gzip
 
 import paddle.v2 as paddle
 import paddle.v2.evaluator as evaluator
-from paddle import batch, reader
+from paddle.v2 import batch, reader
 import paddle.v2.optimizer as opt
 
 
