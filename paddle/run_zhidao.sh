@@ -57,7 +57,7 @@ train() {
         --testset /mnt/datasets/dureader-1st-round/preprocessed/devset/zhidao.dev.json \
         --vocab_file /home/kesci/work/zhidao.vocab \
         --emb_dim $emb_dim \
-        --batch_size 32 \
+        --batch_size 16 \
         --vocab_size $vocab_size \
         --trainer_count 4 \
         --log_period 10 \
