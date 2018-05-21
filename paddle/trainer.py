@@ -155,7 +155,9 @@ class Trainer(object):
     def _prepare(self):
         # prepare reader
         self.train_reader = batch(
+                            paddle.reader.shuffle(
                             reader=self.train_reader.create_reader(),
+                            buf_size=self.args.batch_size),
                             batch_size=self.args.batch_size)
         self.test_reader = batch(
                            reader=self.test_reader.create_reader(),
