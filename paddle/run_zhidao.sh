@@ -47,6 +47,9 @@ mkdir -p $log_dir
 emb_dim=300
 vocab_size=200000
 
+emb_dim=128
+vocab_size=100000
+
 train() {
     cp *.py $env_dir/
     PYTHONPATH=$PWD:$ROOT CUDA_VISIBLE_DEVICES=0 python2 $env_dir/run.py \
